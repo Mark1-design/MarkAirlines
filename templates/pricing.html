@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Pricing {% endblock %}
+
+{% block content %}
+
+<div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Pricing</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'airways_app:home' %}">Home</a></li>
+          <li class="current">Pricing</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+
+    <!-- Fare Categories Overview -->
+    <section class="fare-categories">
+        <div class="container">
+            <div class="fare-card">
+                <h3>Economy</h3>
+                <p>Basic seating and standard services.</p>
+                <span>From $100</span>
+                <button>Explore More</button>
+            </div>
+            <div class="fare-card">
+                <h3>Premium Economy</h3>
+                <p>Extra legroom and enhanced services.</p>
+                <span>From $200</span>
+                <button>Explore More</button>
+            </div>
+            <div class="fare-card">
+                <h3>Business</h3>
+                <p>Luxurious seating with exclusive services.</p>
+                <span>From $500</span>
+                <button>Explore More</button>
+            </div>
+            <div class="fare-card">
+                <h3>First Class</h3>
+                <p>Top-tier luxury and personalized service.</p>
+                <span>From $1000</span>
+                <button>Explore More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="pricing-table">
+        <div class="container">
+            <h2>Compare Fare Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>Economy</th>
+                        <th>Premium Economy</th>
+                        <th>Business</th>
+                        <th>First Class</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Baggage Allowance</td>
+                        <td>1 Checked Bag</td>
+                        <td>2 Checked Bags</td>
+                        <td>2 Checked Bags + 1 Carry-on</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Seat Selection</td>
+                        <td>Standard</td>
+                        <td>Preferred</td>
+                        <td>Custom</td>
+                        <td>Luxury Suite</td>
+                    </tr>
+                    <tr>
+                        <td>In-flight Meals</td>
+                        <td>Basic</td>
+                        <td>Enhanced</td>
+                        <td>Gourmet</td>
+                        <td>Custom Menu</td>
+                    </tr>
+                    <tr>
+                        <td>Entertainment</td>
+                        <td>Standard</td>
+                        <td>Upgraded</td>
+                        <td>Premium</td>
+                        <td>Luxury Experience</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+{% endblock %}

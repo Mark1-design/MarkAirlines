@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %} Show Appointments {% endblock %}
+
+{% block content %}
+
+<div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Show_Appointments</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'airways_app:home' %}">Home</a></li>
+          <li class="current">Show_Appointments</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <div class="container mt-4">
+    {% if appointments %}
+<table class="table table=dark">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th> Email </th>
+            <th>subject</th>
+            <th>destination</th>
+            <th>departure_date</th>
+            <th>return_date</th>
+            <th>number_of_passengers</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment.name }}</td>
+            <td>{{ appointment.email }}</td>
+            <td>{{ appointment.subject}}</td>
+            <td>{{ appointment.destination }}</td>
+            <td>{{ appointment.departure_date}}</td>
+            <td>{{ appointment.return_date }}</td>
+            <td>{{ appointment.number_of_passengers }}</td>
+            <td>
+                <a href="{% url 'airways_app:update_appointment' appointment.id %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'airways_app:delete_appointment' appointment.id %}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'airways_app:pay' appointment.id %}" class="btn btn-success">Pay</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+{% else %}
+<div class="alert alert-info" role="alert">
+    <strong>No Appointments Found:</strong> You have not made any appointments yet. 
+    <a href="{% url 'airways_app:appointment' %}" class="alert-link">Book Now</a>.
+</div>
+{% endif %}
+</div>
+
+{% endblock %}

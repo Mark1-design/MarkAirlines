@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About {% endblock %}
+
+{% block content %}
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">About</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'airways_app:home' %}">Home</a></li>
+          <li class="current">About</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3>Connecting the world, One Flight at a Time</h3>
+            <img src="{% static 'assets\img\about -1.jpeg' %}" class="img-fluid rounded-4 mb-4" width="600" height="300" alt="">
+            <p>Your trusted companion for global adventures.</p>
+            <p>Founded in 2003, Mark Airline began with a mission to redefine air travel. Today, we serve millions of passangers across over 40+ destinations worldwide.</p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+              Embark on unforgettable adventures with Mark Airline, where your comfort and convenience are our top priorities. Our aboutpage is designed to help you navigate the skies with ease:
+                </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Mission: To provide safe, reliable and world-class air travel.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Vision: To be the airline of choice, recognized globally for service excellence.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Core Values: Safety, Integrity and Innovation.</span></li>
+              </ul>
+              <p>
+                Whether you’re flying for business or pleasure, we ensure a world-class experience from booking to landing. Choose from economy, business, or first-class experiences.
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="{% static 'assets/img/about-3.jpeg' %}" class="img-fluid rounded-4" width="400" height="300"  alt="">
+               </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </section><!-- /About Section -->
+
+{% endblock %}
+
+
+
+
+  
+
+
+
+   
+
+

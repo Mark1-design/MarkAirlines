@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Booking {% endblock %}
+
+{% block content %}
+<div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Booking</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'airways_app:home' %}">Home</a></li>
+          <li class="current">Booking</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+    <!-- Booking Form Section -->
+    <section class="booking">
+        <div class="container">
+            <h2>Book Your Flight</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label for="destination">Destination:</label>
+                <select id="destination-select" name="destination" required>
+                  <option value="">-- Select Your Destination --</option>
+                    <option value="South Africa" data-img="{% static 'assets/img/south.jpeg' %}" data-desc="Discover the vibrant spirit and rich heritage of the Africa.">South Africa</option>
+                    <option value="paris" data-img="{% static 'assets/img/paris.jpg' %}" data-desc="Experience the romance and history of the City of Light.">Paris</option>
+                    <option value="tokyo" data-img="{% static 'assets/img/tokyo.jpeg' %}" data-desc="Discover the vibrant culture and skyline of Tokyo.">Tokyo</option>
+                    <option value="newyork" data-img="{% static 'assets/img/usa.jpeg' %}" data-desc="Explore the bustling streets and iconic landmarks of New York City.">New York</option>
+                </select>
+                 
+                <label for="name-field" class="pb-2">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name-field" placeholder="Your Name" required="">
+
+                <label for="departure_date">Departure Date:</label>
+                <input type="date" id="departure_date" name="departure_date" required>
+
+                <label for="return_date">Return Date:</label>
+                <input type="date" id="return_date" name="return_date" required>
+
+                <label for="passengers">Number of Passengers:</label>
+                <input type="number" id="passengers" name="passengers" min="1" max="10" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+
+            <div id="destination-info">
+                <img id="destination-img" src="{% static 'assets/img/default.jpg' %}" alt="Destination Image">
+                <p id="destination-desc">Select a destination to see details.</p>
+            </div>
+            
+            <!-- Dropdown or buttons for destination selection -->
+            
+            
+            <!-- JavaScript to handle dynamic changes -->
+            <script>
+            document.getElementById('destination-select').addEventListener('change', function() {
+                const selectedOption = this.options[this.selectedIndex];
+                const newImg = selectedOption.getAttribute('data-img');
+                const newDesc = selectedOption.getAttribute('data-desc');
+                
+                // Update the image and description
+                document.getElementById('destination-img').src = newImg;
+                document.getElementById('destination-desc').innerText = newDesc;
+            });
+            </script>
+            
+</body>
+</html>
+
+{% endblock %}

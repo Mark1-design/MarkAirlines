@@ -1,0 +1,52 @@
+/* Centering the form */
+body {
+  background-color: #e0f0ff; /* Light blue background for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Optional: sets a clean font */
+}
+
+form {
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted look */
+  padding: 30px; /* Space inside the form */
+  width: 100%;
+  max-width: 400px; /* Limits form width */
+  box-sizing: border-box;
+}
+
+form .form-group {
+  margin-bottom: 15px; /* Space between input groups */
+}
+
+form .input-group-text {
+  background-color: #87ceeb; /* Light blue icon background */
+  border: none;
+  color: white; /* Icon color */
+}
+
+form .btn-primary {
+  background-color: #4a90e2; /* Primary button color */
+  border: none;
+}
+
+form .btn-primary:hover {
+  background-color: #357ab7; /* Darker shade on hover */
+}
+
+form a {
+  color: #4a90e2; /* Link color */
+  text-decoration: none; /* Removes underline */
+}
+
+form a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.text-center p {
+  color: #555; /* Optional: text color for better readability */
+}

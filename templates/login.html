@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%} Log In {% endblock %}
+
+{% block content %}
+
+{% if messages %}
+<ul>
+  {% for message in messages %} 
+  <li style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">
+    {{ message }}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<div class="page-title dark-background">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">login</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="{% url 'airways_app:home' %}">Home</a></li>
+        <li class="current">login</li>
+      </ol>
+    </nav>
+  </div>
+</div><!-- End Page Title -->
+
+<form method="post">
+        {% csrf_token %}
+<div class="form-group input-group">
+	<div class="input-group-prepend">
+		<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+	 </div>
+    <input name="username" class="form-control" placeholder="Username" type="text" required autocomplete="off">
+</div> <!-- form-group// -->
+
+<!-- Email Field -->
+<div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+     </div>
+    <input name="email" class="form-control" placeholder="Email address" type="email" required>
+</div> <!-- form-group// -->
+  
+<div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+     </div>
+    <input name="password" class="form-control" placeholder="Enter your password" type="password" required autocomplete="new-password">
+</div> <!-- form-group// -->
+  
+<!-- 2 column grid layout for inline styling -->
+<div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+      <!-- Checkbox -->
+       <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+         <label class="form-check-label" for="form2Example31"> Remember me </label>
+        </div>
+    </div>
+  
+    <div class="col">
+      <!-- Simple link -->
+      <a href="{% url 'airways_app:register' %}">Forgot password?</a>
+    </div>
+</div>
+  
+    <!-- Submit button -->
+   <a href="{% url 'airways_app:home' %}" class="btn btn-primary btn-block mb-4">Sign in</a>
+
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>Not a member? <a href="{% url 'airways_app:register' %}">Register</a></p>
+    </div>
+</form>
+
+  {% endblock %}

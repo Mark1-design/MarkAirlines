@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+.fare-categories .container {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+}
+
+.fare-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    width: 20%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fare-card h3 {
+    color: #224469;
+}
+
+.fare-card button {
+    background-color: #22456b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.pricing-table table, .pricing-table th, .pricing-table td {
+    border: 1px solid #ddd;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.pricing-table th {
+    background-color: #22456b;
+    color: white;
+}
+
+.features {
+    background-color: #f9f9f9;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.features .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.features h2 {
+    color: #22456b;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Adjust for responsiveness */
+    margin: 1rem 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    color: #22456b;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-item p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Booking Page Styles */
+.booking {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.booking .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #22456b;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #22456b;
+}
+
+/* Destination Info Section */
+#destination-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#destination-info img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#destination-info p {
+    color: #555;
+    font-size: 1.2rem;
+}
+/*--------------------------------------------------------------
+# appointment Section
+--------------------------------------------------------------*/
+.appointment .info {
+    background-color: var(--surface-color);
+    padding: 40px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .appointment .info h3 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+  
+  .appointment .info p {
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+  
+  .appointment .info-item+.info-item {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+  
+  .appointment .info-item i {
+    font-size: 24px;
+    color: var(--accent-color);
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px;
+  }
+  
+  .appointment .info-item h4 {
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .appointment .info-item p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+  }
+  
+  .appointment .php-email-form {
+    width: 100%;
+  }
+  
+  .appointment .php-email-form .form-group {
+    padding-bottom: 8px;
+  }
+  
+  .appointment .php-email-form input[type=text],
+  .appointment .php-email-form input[type=email],
+  .appointment .php-email-form textarea {
+    color: var(--default-color);
+    background-color: var(--surface-color);
+    border-radius: 0px;
+    box-shadow: none;
+    font-size: 14px;
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  }
+  
+  .appointment .php-email-form input[type=text]:focus,
+  .appointment .php-email-form input[type=email]:focus,
+  .appointment .php-email-form textarea:focus {
+    border-color: var(--accent-color);
+  }
+  
+  .appointment .php-email-form input[type=text]::placeholder,
+  .appointment .php-email-form input[type=email]::placeholder,
+  .appointment .php-email-form textarea::placeholder {
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
+  }
+  
+  appointment .php-email-form input[type=text],
+  .appointment .php-email-form input[type=email] {
+    height: 48px;
+    padding: 10px 15px;
+  }
+  
+  .appointment .php-email-form textarea {
+    padding: 10px 12px;
+    height: 290px;
+  }
+  
+  .appointment .php-email-form button[type=submit] {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    border: 0;
+    padding: 13px 50px;
+    transition: 0.4s;
+    border-radius: 4px;
+  }
+  
+  .appointment .php-email-form button[type=submit]:hover {
+    background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+  }
+
+  /*--------------------------------------------------------------
+# appointment Section
+--------------------------------------------------------------*/
+.appointment .info-wrap {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
+  padding: 30px;
+  height: 100%;
+}
+
+@media (max-width: 575px) {
+  .appointment .info-wrap {
+    padding: 20px;
+  }
+}
+
+.appointment .info-item {
+  margin-bottom: 40px;
+}
+
+.appointment .info-item i {
+  font-size: 20px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.appointment .info-item h3 {
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.appointment .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.appointment .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.appointment .php-email-form {
+  background-color: var(--surface-color);
+  height: 100%;
+  padding: 30px;
+  border-top: 3px solid var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 575px) {
+  .appointment .php-email-form {
+    padding: 20px;
+  }
+}
+
+.appointment .php-email-form input[type=text],
+.appointment .php-email-form input[type=email],
+.appointment .php-email-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.appointment .php-email-form input[type=text]:focus,
+.appointment .php-email-form input[type=email]:focus,
+.appointment .php-email-form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.appointment .php-email-form input[type=text]::placeholder,
+.appointment .php-email-form input[type=email]::placeholder,
+.appointment .php-email-form textarea::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.appointment .php-email-form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.appointment .php-email-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}

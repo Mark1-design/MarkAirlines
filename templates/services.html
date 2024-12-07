@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Services {% endblock %}
+
+{% block content %}
+
+<!-- Page Title -->
+  <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Services</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'airways_app:home' %}">Home</a></li>
+            <li class="current">Services</li>
+          </ol>
+        </nav>
+      </div>
+  </div><!-- End Page Title -->
+
+<!-- Services Section -->
+  <section id="services" class="services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-airplane"></i>
+            </div>
+              <a href="#" class="stretched-link">
+                <h3>Flight Booking Services</h3>
+              </a>
+              <p>Instantly search and book flights to global destinations. Flexible date options and best-price with special packages and discounts for group travels.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-list-check"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Manage Your Booking</h3>
+              </a>
+              <p>Access reservations, check-in online, and select your preferred seats—all from your personalized dashboard.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-globe"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Explore Destinations</h3>
+              </a>
+              <p>Discover detailed guides on our top travel spots, complete with recommendations and exclusive offers</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-gift"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Travel Deals</h3>
+              </a>
+              <p>Check out our latest promotions for discounted flights and vacation packages.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Loyalty Rewards</h3>
+              </a>
+              <p>Join our frequent flyer program to earn miles and unlock rewards, upgrades, and exclusive perks.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-wifi"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>In-Flight Services</h3>
+              </a>
+              <p>We offer In-Flight services such as access to movies, music and games through the advanced in-flight entertainment system, Multi-course meals with options for special dietry needs and Comfort Amenities.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+  </section><!-- /Services Section -->
+
+  <!-- Features Section -->
+<section class="features">
+  <div class="container">
+      <h2>Why Fly with Mark Airline?</h2>
+      <div class="feature-list">
+          <div class="feature-item">
+              <h3>Comfortable Seating</h3>
+              <p>Enjoy spacious seats and ample legroom across all classes.</p>
+          </div>
+          <div class="feature-item">
+              <h3>Global Coverage</h3>
+              <p>Travel to over 100 destinations worldwide with seamless connections.</p>
+          </div>
+          <div class="feature-item">
+              <h3>In-Flight Entertainment</h3>
+              <p>Access a wide range of movies, TV shows, and music during your flight.</p>
+          </div>
+          <div class="feature-item">
+              <h3>Exceptional Service</h3>
+              <p>Our friendly crew ensures a pleasant and comfortable journey.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+{% endblock %}

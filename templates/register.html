@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%} Register {% endblock %}
+{% block content %}
+
+{% if messages %}
+<ul>
+  {% for message in messages %} 
+  <li style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">
+    {{ message }}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Register</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'airways_app:home' %}">Home</a></li>
+          <li class="current">Register</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+<div class="container">
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Create Account</h4>
+	<p class="text-center">Get started with your MarkAirlines_Account</p>
+	<form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Automatically renders fields with previous data and errors -->
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="username" class="form-control" placeholder="Username" type="text" required autocomplete="off">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		 </div>
+        <input name="password" class="form-control" placeholder="Create password" type="password" required autocomplete="new-password">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+		<input name="confirm_password" class="form-control" placeholder="Confirm password" type="password" required>
+    </div> <!-- form-group// -->                                      
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+    </div> <!-- form-group// -->      
+    <p class="text-center">Have an account? <a href="{% url 'airways_app:login' %}">Log In</a> </p> 
+
+                                                                
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+
+{% endblock %}

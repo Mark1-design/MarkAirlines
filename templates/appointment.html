@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%} Appointment {% endblock %}
+{% block content %}
+
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Appointment</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'airways_app:contact' %}">Contact</a></li>
+            <li class="current">Appointment</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container" data-aos="fade">
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="row gy-5 gx-lg-5">
+          <div class="col-lg-4">
+            <div class="info">
+              <h3>Make your flight booking with us</h3>
+              <p>At Mark Airlines, we value personalized service. Book an appointment with our travel specialists to get tailored advice on flight options, exclusive deals and travel planning.</p>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>Syokimau, Nairobi, Kenya</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>mutukumark001@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>+254 112 864 979</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name-field" placeholder="Your Name" required="">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="subject-field" class="pb-2">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
+              </div>
+              <div>
+                <label for="destination">Choose Your Destination:</label>
+                  <select id="destination-select" name="destination" required>
+                  <option value="South Africa" data-img="{% static 'assets/img/south.jpeg' %}" data-desc="Discover the vibrant spirit and rich heritage of the Africa.">South Africa</option>
+                  <option value="paris" data-img="{% static 'assets/img/paris.jpg' %}" data-desc="Experience the romance and history of the City of Light.">Paris</option>
+                  <option value="tokyo" data-img="{% static 'assets/img/tokyo.jpeg' %}" data-desc="Discover the vibrant culture and skyline of Tokyo.">Tokyo</option>
+                  <option value="newyork" data-img="{% static 'assets/img/usa.jpeg' %}" data-desc="Explore the bustling streets and iconic landmarks of New York City.">New York</option>
+                  </select>
+              </div>
+  
+            <!-- Booking Details -->
+             <label for="departure_date">Departure Date:</label>
+             <input type="date" id="departure_date" name="departure_date" required>
+
+            <label for="return_date">Return Date:</label>
+            <input type="date" id="return_date" name="return_date" required>
+
+            <label for="passengers">Number of Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1" max="10" required>
+     
+
+          <div id="destination-info">
+           <img id="destination-img" src="{% static 'assets/img/default.jpg' %}" alt="Destination Image">
+           <p id="destination-desc">Select a destination to see details.</p>
+          </div>
+
+          <div class="my-3">
+           <div class="error-message"></div>
+           <div class="text-center"><button type="submit">Send Message</button></div>
+           <div class="sent-message">Your message has been sent. Thank you!</div>
+         </div>
+        </div>
+      </div> 
+    </form>
+
+
+<!-- JavaScript to handle dynamic changes -->
+<script>
+document.getElementById('destination-select').addEventListener('change', function() {
+  const selectedOption = this.options[this.selectedIndex];
+  const newImg = selectedOption.getAttribute('data-img');
+  const newDesc = selectedOption.getAttribute('data-desc');
+  
+  // Update the image and description
+  document.getElementById('destination-img').src = newImg;
+  document.getElementById('destination-desc').innerText = newDesc;
+});
+</script>
+            
+</section><!-- /Contact Section -->
+
+{% endblock %}

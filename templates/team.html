@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Team {% endblock %}
+
+{% block content %}
+
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Testiomonials</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'airways_app:home' %}">Home</a></li>
+            <li class="current">Testimonials</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+<!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item">
+              <img src="{% static 'assets/img/team/team-1.jpeg' %}" class="testimonial-img" alt="">
+              <h3>Mark Mutuku</h3>
+              <h4>Ceo &amp; Founder</h4>
+              <p>
+                <span>With over 20 years of experience in the aviation industry, Mark Mutuku co-founded Mark Airline with a vision to redefine air travel. His leadership combines deep industry knowledge and a commitment to exceptional customer service. Under his guidance, Mark Airline has grown into a trusted name known for innovation, safety, and reliability.</span>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-item">
+              <img src="{% static 'assets/img/team/team-6.jpeg' %}" class="testimonial-img" alt="">
+              <h3>Faith Mwafaida</h3>
+              <h4>Lead Designer</h4>
+              <p>
+                <span>Faith is the creative force behind the visual identity of Mark Airline. With over 10 years of experience in graphic and digital design, she has worked with top brands to craft innovative and user-friendly designs.</span>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-item">
+              <img src="{% static 'assets/img/team/team-2.jpeg' %}" class="testimonial-img" alt="">
+              <h3>Anns Chebet</h3>
+              <h4>Marketing & Communications</h4>
+              <p>
+                <span>Anns leads the airline's marketing and communication strategies, crafting compelling campaigns that promote the Mark Airline brand. With a background in digital marketing and public relations, she ensures the airline’s message reaches its global audience while maintaining a consistent and engaging presence across all channels.
+                 </span>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-item">
+              <img src="{% static 'assets/img/team/team-3.jpeg' %}" class="testimonial-img" alt="">
+              <h3>Bonventure Gitau</h3>
+              <h4>Chief Financial Officer</h4>
+              <p>
+                <span>Bonventure Gitau manages the airline’s finances, budgeting, and financial strategy. With a deep understanding of aviation finance, he has played a big role in securing investments and ensuring the airline’s long-term financial health.</span>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="testimonial-item">
+              <img src="{% static 'assets/img/team/team-4.jpeg' %}" class="testimonial-img" alt="">
+              <h3>Alex Muia</h3>
+              <h4>Chief Operating Officer</h4>
+              <p>
+              <span>He oversees Mark Airline’s day-to-day operations, ensuring that everything from flight schedules to customer service runs smoothly. His strong background in operational excellence and logistics has been crucial to maintaining efficiency and improving customer experiences.</span>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="testimonial-item">
+              <img src="{% static 'assets/img/team/team-5.jpeg' %}" class="testimonial-img" alt="">
+              <h3>Lilian Wairimu</h3>
+              <h4>Human Resource Manager</h4>
+              <p>
+                <span>Lilian is an experienced human resource professional with passion for fostering a positive workspace culture. She has specialized in talent acquisition, employee development and organizational management. Her leadership ensures the Airline remains a top choice for talent, promoting a supportive environment where employees thrive and contribute to exceptional customer services.</span>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+{% endblock %}
